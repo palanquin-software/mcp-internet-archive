@@ -10,10 +10,8 @@
 <div align="center">
 <br />
 
-[![Project license](https://img.shields.io/github/license/palanquin-software/mcp-internet-archive.svg?style=flat-square)](mcp-internet-archive/LICENSE)
-
-[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/palanquin-software/mcp-internet-archive/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-[![code with love by palanquin-software](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-palanquin-software-ff1414.svg?style=flat-square)](https://github.com/palanquin-software)
+[![Project license](https://img.shields.io/github/license/palanquin-software/mcp-internet-archive.svg?style=flat-square)](LICENSE)
+[![Made by Palanquin Software](https://img.shields.io/badge/made%20by-Palanquin%20Software-blue?style=flat-square)](https://github.com/palanquin-software)
 
 </div>
 
