@@ -1,15 +1,11 @@
-<h2 align="center">
+<div style="text-align: center">
+<h2>
   <a href="https://github.com/palanquin-software/mcp-internet-archive">
-    <!-- Please provide path to your logo here -->
     <img src="docs/logo.png" alt="MCP Internet Archive" width="276" height="119">
   </a>
     <br />
   MCP Internet Archive
 </h2>
-
-<div align="center">
-<br />
-
 [![Project license](https://img.shields.io/github/license/palanquin-software/mcp-internet-archive.svg?style=flat-square)](LICENSE)
 [![Made by Palanquin Software](https://img.shields.io/badge/made%20by-Palanquin%20Software-blue?style=flat-square)](https://github.com/palanquin-software)
 
@@ -26,22 +22,25 @@
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [License](#license)
-
 </details>
 
 ---
 
 ## About
 
-MCP Internet Archive is a Model Context Protocol (MCP) server that provides AI assistants with the ability to search and download public domain and Creative Commons licensed audio content from the Internet Archive (archive.org).
+MCP Internet Archive is a Model Context Protocol (MCP) server that provides AI assistants with the ability to search and
+download public domain and Creative Commons licensed audio content from the Internet Archive (archive.org).
 
 This server enables AI systems to:
+
 - Search the vast Internet Archive audio collection
 - Retrieve detailed metadata about audio items
 - Download audio files with intelligent format selection
 - Automatically detect and concatenate multi-part audio files
 
-The project was created to make the Internet Archive's treasure trove of public domain audio content easily accessible to AI assistants, enabling them to help users discover and retrieve historical recordings, radio broadcasts, music, and other audio materials.
+The project was created to make the Internet Archive's treasure trove of public domain audio content easily accessible
+to AI assistants, enabling them to help users discover and retrieve historical recordings, radio broadcasts, music, and
+other audio materials.
 
 ### Built With
 
@@ -56,20 +55,20 @@ The project was created to make the Internet Archive's treasure trove of public 
 ### Prerequisites
 
 - Go 1.25.2 or later
-- [mise](https://mise.jdx.dev/) (optional, for task runner)
 - FFmpeg (optional, for multi-part file concatenation)
 
 ### Installation
 
 **Using mise:**
+
 ```bash
 git clone https://github.com/palanquin-software/mcp-internet-archive.git
 cd mcp-internet-archive
-mise install
-mise run install
+make install
 ```
 
 **Manual installation:**
+
 ```bash
 git clone https://github.com/palanquin-software/mcp-internet-archive.git
 cd mcp-internet-archive
@@ -130,9 +129,10 @@ Download audio files with intelligent format selection and optional concatenatio
 Download audio from "Complete_Broadcast_Day_D-Day"
 ```
 
-**Multi-part file handling:**
+**Multipart file handling:**
 
-The server automatically detects multi-part files (e.g., `Part_001.mp3`, `Part_002.mp3`, etc.). If 5 or more parts are detected, it will suggest concatenation:
+The server automatically detects multipart files (e.g., `Part_001.mp3`, `Part_002.mp3`, etc.). If 5 or more parts are
+detected, it will suggest concatenation:
 
 ```
 Download audio from "Complete_Broadcast_Day_D-Day" with concat=true
@@ -142,14 +142,14 @@ This will download all parts, concatenate them into a single file using ffmpeg, 
 
 ## Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `IA_S3_ACCESS_KEY` | Internet Archive S3 access key | (none) |
-| `IA_S3_SECRET_KEY` | Internet Archive S3 secret key | (none) |
-| `IA_MAX_RESULTS` | Maximum search results to return | `10` |
-| `IA_DOWNLOAD_DIR` | Directory for downloaded files | `~/Downloads` |
-| `IA_FFMPEG` | Path to ffmpeg binary | `ffmpeg` |
-| `IA_CONCAT_ASK_THRESH` | Minimum parts to suggest concatenation | `5` |
+| Variable               | Description                            | Default       |
+|------------------------|----------------------------------------|---------------|
+| `IA_S3_ACCESS_KEY`     | Internet Archive S3 access key         | (none)        |
+| `IA_S3_SECRET_KEY`     | Internet Archive S3 secret key         | (none)        |
+| `IA_MAX_RESULTS`       | Maximum search results to return       | `10`          |
+| `IA_DOWNLOAD_DIR`      | Directory for downloaded files         | `~/Downloads` |
+| `IA_FFMPEG`            | Path to ffmpeg binary                  | `ffmpeg`      |
+| `IA_CONCAT_ASK_THRESH` | Minimum parts to suggest concatenation | `5`           |
 
 ## Roadmap
 
