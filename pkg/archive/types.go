@@ -77,7 +77,7 @@ type ItemMetadata struct {
 	Date        string   `json:"date,omitempty"`
 	Description string   `json:"description,omitempty"`
 	MediaType   string   `json:"mediatype,omitempty"`
-	Collection  []string `json:"collection,omitempty"`
+	Collection  interface{} `json:"collection,omitempty"`
 	Subject     string   `json:"subject,omitempty"`
 	Scanner     string   `json:"scanner,omitempty"`
 	Uploader    string   `json:"uploader,omitempty"`
